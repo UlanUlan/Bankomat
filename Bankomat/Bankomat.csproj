@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="GeneratorName">
-      <HintPath>..\..\..\..\..\Desktop\GeneratorName.dll</HintPath>
+      <HintPath>\\dc\Студенты\ПКО\SEB-171.2\C#\Exception\GeneratorName.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

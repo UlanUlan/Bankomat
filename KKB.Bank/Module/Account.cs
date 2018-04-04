@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace KKB.Bank.Module
 {
-    class Account
+    public class Account
     {
         public Account()
         {
             ListCards = new List<Cards>();
           //  Balance = 0;
         }
+       
 
         public DateTime CreateDate { get; set; }
         public DateTime CloseDate { get; set; }
@@ -27,6 +28,7 @@ namespace KKB.Bank.Module
                     item.GetCardNumber(), item.Cardtype, item.ExpDate);
 
                 Console.WriteLine(info);
+         
             }
         }
         

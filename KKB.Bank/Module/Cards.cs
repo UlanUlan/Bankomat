@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace KKB.Bank.Module
 {
     public enum CardType{ MasterCard, Visa, Maestro }
-    class Cards
+    public class Cards
     {
         public string CardNumber { get;  set; }
         public DateTime ExpDate { get; set; }

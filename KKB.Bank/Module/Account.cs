@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KKB.Bank.Module
 {
-    class Account
+    public class Account
     {
         public Account()
         {

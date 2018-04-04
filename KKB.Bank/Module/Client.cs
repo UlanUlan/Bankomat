@@ -57,21 +57,42 @@ namespace KKB.Bank.Module
         public string PhoneNumber { get; set; }
         public List<Account> ListAccount;
 
+        public bool isBlocked { get; set; } = false; 
+
+        private int WrongField_ =0;
+        public int WrongField
+        {
+            get
+            {
+                return WrongField_;
+            }
+            set
+            {
+                if(value >= 3)
+                    isBlocked = true;
+                WrongField_ = value;
+            }
+        }
+
         public void ClientInfoPrint()
         {
             Console.WriteLine("{0}\n {1}\n {2}\n {3}\n {4}\n {5}\n", FullName, IIN, Login, Password, PhoneNumber, DoB);
         }
         public void PrintAccountInfo()
         {
-            foreach (Account item  in ListAccount)
+            double sumBalance = 0;
+            foreach (Account item in ListAccount)
             {
-                Console.WriteLine("KZ: {0}",item.AccountNumber);
-                Console.WriteLine("Date Created: {0} ",item.CreateDate);
-                Console.WriteLine("Exp. Date: {0}",item.CloseDate);
-                Console.WriteLine("Balance: {0}",item.Balance);
-                
+                Console.WriteLine("KZ: {0}", item.AccountNumber);
+                Console.WriteLine("Date Created: {0} ", item.CreateDate);
+                Console.WriteLine("Exp. Date: {0}", item.CloseDate);
+                Console.WriteLine("Balance: {0}", item.Balance);
 
+                sumBalance += item.Balance;
             }
+            
+            Console.WriteLine("итого сумма на счетах: {0:n0}",sumBalance);
         }
+        //public void 
     }
 }

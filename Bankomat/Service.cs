@@ -24,6 +24,7 @@ namespace Bankomat
                 c.ListAccount.Add(createAccount());
             }
         }
+
         public static Account createAccount()
         {
             Account acc = new Account();
@@ -34,6 +35,5 @@ namespace Bankomat
 
             return acc;
         }
-
     }
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using GeneratorName;
+//using GeneratorName;
 namespace Bankomat
 {
    public class Service
@@ -13,8 +13,9 @@ namespace Bankomat
 
         public static void createClient(ref Client c)
         {
-            Generator gen = new Generator();
-            c.FullName = gen.GenerateDefault(Gender.woman);
+            //Generator gen = new Generator();
+            //c.FullName = gen.GenerateDefault(Gender.woman);
+            c.FullName = "ABC";
             c.IIN = "123123123123";
             c.PhoneNumber = "+77781112233";
             c.DoB = DateTime.Now;

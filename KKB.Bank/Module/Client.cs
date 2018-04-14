@@ -59,7 +59,7 @@ namespace KKB.Bank.Module
 
         public bool isBlocked { get; set; } = false; 
 
-        private int WrongField_ =0;
+        private int WrongField_ = 3;
         public int WrongField
         {
             get
@@ -68,7 +68,7 @@ namespace KKB.Bank.Module
             }
             set
             {
-                if(value >= 3)
+                if(value == 0)
                     isBlocked = true;
                 WrongField_ = value;
             }
